@@ -14,46 +14,42 @@
 ' Styling
 ' ##################################
 
-skinparam rectangle<<person>> {
-StereotypeFontColor $ELEMENT_FONT_COLOR
-FontColor $ELEMENT_FONT_COLOR
-BackgroundColor $PERSON_BG_COLOR
-BorderColor #073B6F
+skinparam actor<<person>> {
+    BackgroundColor $PERSON_BG_COLOR
+    BorderColor #073B6F
 }
 
-skinparam rectangle<<external_person>> {
-StereotypeFontColor $ELEMENT_FONT_COLOR
-FontColor $ELEMENT_FONT_COLOR
-BackgroundColor $EXTERNAL_PERSON_BG_COLOR
-BorderColor #8A8A8A
+skinparam actor<<external_person>> {
+    BackgroundColor $EXTERNAL_PERSON_BG_COLOR
+    BorderColor #8A8A8A
 }
 
 skinparam rectangle<<system>> {
-StereotypeFontColor $ELEMENT_FONT_COLOR
-FontColor $ELEMENT_FONT_COLOR
-BackgroundColor $SYSTEM_BG_COLOR
-BorderColor #3C7FC0
+    StereotypeFontColor $ELEMENT_FONT_COLOR
+    FontColor $ELEMENT_FONT_COLOR
+    BackgroundColor $SYSTEM_BG_COLOR
+    BorderColor #3C7FC0
 }
 
 skinparam rectangle<<external_system>> {
-StereotypeFontColor $ELEMENT_FONT_COLOR
-FontColor $ELEMENT_FONT_COLOR
-BackgroundColor $EXTERNAL_SYSTEM_BG_COLOR
-BorderColor #8A8A8A
+    StereotypeFontColor $ELEMENT_FONT_COLOR
+    FontColor $ELEMENT_FONT_COLOR
+    BackgroundColor $EXTERNAL_SYSTEM_BG_COLOR
+    BorderColor #8A8A8A
 }
 
 skinparam database<<system>> {
-StereotypeFontColor $ELEMENT_FONT_COLOR
-FontColor $ELEMENT_FONT_COLOR
-BackgroundColor $SYSTEM_BG_COLOR
-BorderColor #3C7FC0
+    StereotypeFontColor $ELEMENT_FONT_COLOR
+    FontColor $ELEMENT_FONT_COLOR
+    BackgroundColor $SYSTEM_BG_COLOR
+    BorderColor #3C7FC0
 }
 
 skinparam database<<external_system>> {
-StereotypeFontColor $ELEMENT_FONT_COLOR
-FontColor $ELEMENT_FONT_COLOR
-BackgroundColor $EXTERNAL_SYSTEM_BG_COLOR
-BorderColor #8A8A8A
+    StereotypeFontColor $ELEMENT_FONT_COLOR
+    FontColor $ELEMENT_FONT_COLOR
+    BackgroundColor $EXTERNAL_SYSTEM_BG_COLOR
+    BorderColor #8A8A8A
 }
 
 ' Layout
@@ -74,17 +70,17 @@ endlegend
 ' ##################################
 
 !unquoted function Person($alias, $label)
-rectangle "==$label" <<person>> as $alias
+actor "==$label" <<person>> as $alias
 !endfunction
 !unquoted function Person($alias, $label, $descr)
-rectangle "==$label\n\n $descr" <<person>> as $alias
+actor "==$label\n\n $descr" <<person>> as $alias
 !endfunction
 
 !unquoted function Person_Ext($alias, $label)
-rectangle "==$label" <<external_person>> as $alias
+actor "==$label" <<external_person>> as $alias
 !endfunction
 !unquoted function Person_Ext($alias, $label, $descr)
-rectangle "==$label\n\n $descr" <<external_person>> as $alias
+actor "==$label\n\n $descr" <<external_person>> as $alias
 !endfunction
 
 !unquoted function System($alias, $label)
